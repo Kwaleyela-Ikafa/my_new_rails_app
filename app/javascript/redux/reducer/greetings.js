@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const FETCH_GREETINGS = 'FETCH_GREETINGS'
-const API_URL = 'http://127.0.0.1:3000/api/v1/greetings/6'
+const API_URL = 'http://127.0.0.1:3000/api/v1/greetings/random'
 
 export const getGreetings = (payload) => ({
   type: FETCH_GREETINGS,

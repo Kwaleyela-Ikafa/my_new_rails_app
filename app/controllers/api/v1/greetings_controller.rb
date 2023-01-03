@@ -10,11 +10,10 @@ module Api
       end
 
       def show
-        # greeting = Greeting.find(params[:id])
+        Greeting.find_by(id: params[:id]) || Greeting.random
 
-        greeting = Greeting.find_by(id: params[:id]) || Greeting.random
-
-        render json: GreetingSerializer.new(greeting).serialized_json
+        render json: { greeting: Greeting.all.sample }, status: :ok
+        # render json: GreetingSerializer.new(greeting).serialized_json
       end
 
       def create

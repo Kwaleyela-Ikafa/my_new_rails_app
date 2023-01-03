@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-  greetings = Greeting.create([
+Greeting.create([
     { message: "Hello World" },
     { message: "Good Morning" },
     { message: "Good Afternoon" },
